@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Search Result</h1>
+  <table>  
+    <tr>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Photo</th>
+          <th>Price</th>
+        </tr>
+        {% for product in result %}
+          <tr>
+            <td>{{ product['title'] }}</td>
+            <td>
+              <img src="{{ product['img'] }}" alt="">
+            </td>
+            <td>{{ product['price'] }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </tr>
+  </table>>
+</body>
+</html>
